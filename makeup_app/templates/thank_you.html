@@ -1,0 +1,17 @@
+{% extends 'app.html' %}
+{% load static %}
+
+{% block title %}Thank You - Glam N Revamp{% endblock %}
+
+{% block content %}
+<style>
+    body {
+      background-color: rgb(211, 143, 161) !important;
+    }
+</style>
+<div class="container my-5 p-5 bg-white rounded shadow text-center">
+  <h1 class="text-pink mb-4">Thank You!</h1>
+  <p class="fs-5">Your purchase inquiry has been received. We'll contact you soon!</p>
+  <a href="{% url 'home' %}" class="btn btn-pink mt-4">Back to Home</a>
+</div>
+{% endblock %}

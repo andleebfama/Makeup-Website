@@ -1,0 +1,38 @@
+/* category.css */
+
+h1, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #9c27b0; /* Purple shade for heading */
+}
+
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(156, 39, 176, 0.4); /* Purple glow */
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-top: 10px;
+}
+
+.container {
+    background-color: #ffe6f0;
+    padding: 30px;
+    border-radius: 20px;
+}
+

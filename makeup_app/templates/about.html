@@ -1,0 +1,66 @@
+{% extends 'app.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+  body {
+    background-color: #fce4ec;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .about-container {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+  }
+
+  .about-heading {
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #d81b60;
+    position: relative;
+  }
+
+  .about-heading::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #d81b60;
+    margin: 10px auto;
+    border-radius: 2px;
+  }
+
+  .about-lead {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+
+  .about-img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+</style>
+
+<div class="container my-5 about-container text-center">
+  <img src="{% static 'images/beauty-about.png' %}" alt="About Glam N Revamp" class="about-img" style="max-height: 250px; width: 50%;">
+
+  <h1 class="about-heading">About Us</h1>
+
+  <p class="about-lead">
+    Welcome to <strong>Glam N Revamp</strong>! We are passionate about providing the best beauty and cosmetics 
+    products to enhance your everyday style. Our mission is to make high-quality beauty products 
+    accessible to everyone. Whether you're looking for the latest trends or timeless classics, 
+    we’ve got you covered.
+  </p>
+  <p class="about-lead">
+    Founded in <strong>2024</strong>, Glam N Revamp is dedicated to delivering exceptional products that inspire 
+    confidence and self-expression. Thank you for choosing us as your beauty companion!
+  </p>
+</div>
+{% endblock %}

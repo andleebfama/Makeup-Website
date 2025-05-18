@@ -1,0 +1,22 @@
+.contact-container {
+  background-color: rgba(255, 255, 255, 0.85); /* White with 85% opacity */
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional aesthetic touches */
+.text-pink {
+  color: #e83e8c;
+}
+
+.btn-pink {
+  background-color: #e83e8c;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+.btn-pink:hover {
+  background-color: #d63384;
+}

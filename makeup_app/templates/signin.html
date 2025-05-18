@@ -1,0 +1,49 @@
+{% extends 'app.html' %}
+{% load static %}
+
+{% block title %}Login - Glam N Revamp{% endblock %}
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static '/signin.css' %}">
+{% endblock %}
+{% block content %}
+<style>
+  body{
+      background-color: #fce4ec;
+  }
+  .signin-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  height: 80vh;           
+  background: rgba(0, 0, 0, 0.3); 
+  background-image: url('https://cdn.media.amplience.net/i/elfcosmetics/0824_ECOMM_HPTILE_BLUSH_D_FRAME1-min?fmt=auto%201x,%20https://cdn.media.amplience.net/i/elfcosmetics/0824_ECOMM_HPTILE_BLUSH_D_FRAME1-min?fmt=auto%202x,%20https://cdn.media.amplience.net/i/elfcosmetics/0824_ECOMM_HPTILE_BLUSH_D_FRAME1-min?fmt=auto%203x'); /* Optional: Background image */
+  background-size: cover; 
+  background-position: center; 
+  border-radius: 10px;
+}
+</style>
+<div class="signin-container">
+  <div class="signin-box">
+    <h1><i><b>Glam N Revamp</b></i></h1>
+    <h2>Login</h2>
+
+    <form method="post" action="{% url 'signin' %}">
+      {% csrf_token %}
+      <div class="input-group">
+        <input type="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="input-group">
+        <input type="password" name="password" placeholder="Enter your password" required>
+      </div>
+      <button type="submit">Login</button>
+    </form>
+
+    {% if error %}
+      <p class="error-message">{{ error }}</p>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
+
+
+

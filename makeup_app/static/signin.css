@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+.signin-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  height: 100vh;           
+  background: rgba(0, 0, 0, 0.3); 
+  background-image: url('https://i.pinimg.com/736x/6d/bd/73/6dbd73a9e37f138cc1eaf561f0df7e9c.jpg'); /* Optional: Background image */
+  background-size: cover; 
+  background-position: center; 
+}
+
+.signin-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.9); 
+  border-radius: 12px; 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+  backdrop-filter: blur(8px); 
+  width: 100%;
+  max-width: 400px; 
+  text-align: center;
+}
+
+.signin-box h1, .signin-box h2 {
+  color: #333;
+}
+
+.signin-box h1 {
+  font-size: 28px; 
+  margin-bottom: 10px;
+  color: #e91d61;
+}
+
+.signin-box h2 {
+  font-size: 18px; 
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  width: 100%;
+  position: relative;
+}
+
+.input-group label {
+  font-size: 14px;
+  color: #555;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  pointer-events: none;
+  transition: top 0.3s ease, font-size 0.3s ease;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px;  
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #ff33cc;
+  box-shadow: 0 0 8px rgba(255, 51, 204, 0.5);
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background-color: #ff4081; 
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px; 
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e63574; 
+}
+.error-message {
+  color: red;
+  font-size: 14px; 
+  margin-top: 10px;
+}
+@media (max-width: 480px) {
+  .signin-box {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .signin-box h1 {
+    font-size: 22px;
+  }
+
+  .signin-box h2 {
+    font-size: 16px;
+  }
+
+  .input-group input {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  button {
+    padding: 12px;
+    font-size: 16px;
+  }
+}

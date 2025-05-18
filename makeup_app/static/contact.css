@@ -1,0 +1,23 @@
+.contact-container {
+    background-color: #fff0f5;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .text-pink {
+    color: #e83e8c;
+  }
+  
+  .btn-pink {
+    background-color: #e83e8c;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+  }
+  
+  .btn-pink:hover {
+    background-color: #d2337e;
+  }
+  

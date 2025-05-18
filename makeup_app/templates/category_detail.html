@@ -1,0 +1,45 @@
+{% extends "app.html" %}
+{% block title %}{{ category_name }} - Products{% endblock %}
+{% block content %}
+<style>
+    body {
+        background-color: #fce4ec;
+    }
+    .card-img-top {
+        height: 200px;
+        object-fit: cover;
+    }
+</style>
+
+<div class="container mt-5">
+    <h2 class="text-center">{{ category_name }}</h2>
+    <div class="row mt-4">
+        {% for img in images %}
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100" style="min-height: 420px;">
+                <img src="{{ img.url }}" class="card-img-top" alt="Product Image" style="height: 300px; object-fit: cover;">
+                <div class="card-body text-center">
+                    <h5 class="card-title text-pink" style="font-size: 1.3rem;">{{ img.price }}</h5>
+                    <button class="btn btn-outline-pink">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+    .btn-outline-pink {
+        border-color: #e91e63;
+        color: #e91e63;
+    }
+    .btn-outline-pink:hover {
+        background-color: #e91e63;
+        color: white;
+    }
+    .text-pink {
+        color: #e91e63;
+    }
+</style>
+{% endblock %}
